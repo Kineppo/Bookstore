@@ -28,7 +28,17 @@ public class BookController {
     public String addBook(Model model){
     	model.addAttribute("book", new Book());
         return "addbook";
-    }  
+    }
+	
+	@RequestMapping(value="/login")
+	  public String login() {
+	    return "login";
+	  }
+	
+	@RequestMapping(value="/")
+    public String redirect(){
+		return "redirect:/booklist";
+	}
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(Book book){
