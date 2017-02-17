@@ -30,10 +30,9 @@ public class User {
 		super();
 	}
 
-	public User(Long id, String username, String passwordHash, String email,
+	public User(String username, String passwordHash, String email,
 			String role) {
 		super();
-		this.id = id;
 		this.username = username;
 		this.passwordHash = passwordHash;
 		this.email = email;
